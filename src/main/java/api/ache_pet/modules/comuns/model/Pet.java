@@ -1,6 +1,6 @@
-package com.fatec.ache_pet.domain.entities.pets;
+package api.ache_pet.modules.comuns.model;
 
-import com.fatec.ache_pet.domain.enums.pets.EStatusPet;
+import api.ache_pet.modules.comuns.enuns.EStatusPet;
 import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDateTime;

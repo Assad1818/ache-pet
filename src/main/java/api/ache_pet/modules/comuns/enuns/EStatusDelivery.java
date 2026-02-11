@@ -1,4 +1,4 @@
-package com.fatec.ache_pet.domain.enums.pets;
+package api.ache_pet.modules.comuns.enuns;
 
 public enum EStatusDelivery {
     YES,

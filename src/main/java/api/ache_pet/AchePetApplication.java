@@ -1,4 +1,4 @@
-package com.fatec.ache_pet;
+package api.ache_pet;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

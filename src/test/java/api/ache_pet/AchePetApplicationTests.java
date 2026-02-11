@@ -1,4 +1,4 @@
-package com.fatec.ache_pet;
+package api.ache_pet;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

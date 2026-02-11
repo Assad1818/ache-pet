@@ -1,9 +1,9 @@
-package com.fatec.ache_pet.domain.entities.pets.adoption;
+package api.ache_pet.modules.adoption.model;
 
-import com.fatec.ache_pet.domain.entities.pets.Pet;
-import com.fatec.ache_pet.domain.enums.pets.EStatusDelivery;
-import com.fatec.ache_pet.domain.enums.pets.EStatusPet;
-import com.fatec.ache_pet.domain.enums.pets.EVaccinationStatus;
+import api.ache_pet.modules.comuns.model.Pet;
+import api.ache_pet.modules.comuns.enuns.EStatusDelivery;
+import api.ache_pet.modules.comuns.enuns.EStatusPet;
+import api.ache_pet.modules.comuns.enuns.EVaccinationStatus;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
