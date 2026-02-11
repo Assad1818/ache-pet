@@ -1,5 +1,6 @@
 package api.ache_pet.modules.adoption.model;
 
+import api.ache_pet.modules.comuns.enuns.ECastred;
 import api.ache_pet.modules.comuns.model.Pet;
 import api.ache_pet.modules.comuns.enuns.EStatusDelivery;
 import api.ache_pet.modules.comuns.enuns.EStatusPet;
@@ -14,19 +15,28 @@ import lombok.Setter;
 @Table(name = "PET_ADOPTION")
 public class PetAdoption extends Pet {
 
-    @Column(name = "NOME", nullable = false)
+    @Column(name = "NAME", nullable = false)
     private String name;
 
+    @Column (name = "AGE")
+    private String age;
+
     @Enumerated(EnumType.STRING)
-    @Column(name = "DISPONIVEL_ENTREGA")
+    @Column(name = "DELIVERY")
     private EStatusDelivery deliveryStatus;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "STATUS")
-    private EVaccinationStatus vaccinationStatus;
+    @Column(name = "VACCINE")
+    private EVaccinationStatus vaccineStatus;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "CASTRED")
+    private ECastred castred;
+
     public PetAdoption(){
         this.setStatus(EStatusPet.ADOPTION);
-        this.vaccinationStatus = EVaccinationStatus.UNKNOWN;
+        this.vaccineStatus = EVaccinationStatus.UNKNOWN;
         this.deliveryStatus = EStatusDelivery.NO;
+        this.castred = ECastred.NO;
     }
 }

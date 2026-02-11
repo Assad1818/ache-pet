@@ -1,9 +1,8 @@
 package api.ache_pet.modules.found.model;
+import api.ache_pet.modules.comuns.enuns.EStatusDelivery;
 import api.ache_pet.modules.comuns.enuns.EStatusPet;
 import api.ache_pet.modules.comuns.model.Pet;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import java.time.LocalDateTime;
@@ -14,10 +13,14 @@ import java.time.LocalDateTime;
 @Entity
 public class PetFound extends Pet {
 
-    @Column(name = "DATA_ENCONTRADO", nullable = false)
+    @Column(name = "FOUND_DATE", nullable = false)
     private LocalDateTime dateFound;
 
+    @Enumerated(EnumType.STRING)
+    @Column(name = "DELIVERY")
+    private EStatusDelivery statusDelivery;
     public PetFound(){
         this.setStatus(EStatusPet.FOUND);
+        this.statusDelivery = EStatusDelivery.NO;
     }
 }
