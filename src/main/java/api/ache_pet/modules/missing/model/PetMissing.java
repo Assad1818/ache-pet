@@ -16,21 +16,21 @@ import java.time.LocalDateTime;
 @Table(name="PET_MISSING")
 public class PetMissing extends Pet {
 
-    @Column(name = "NAME")
-    private String name;
+    @Column(name = "NAME", nullable = false, length = 255)
+    private String missingPetName;
 
-    @Column(name = "AGE")
-    private String age;
+    @Column(name = "AGE", length = 20)
+    private String missingPetAge;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "CASTRED")
+    @Column(name = "CASTRED", nullable = false)
     private ECastred castred;
 
     @Column(name="MISSING_DATE")
     private LocalDateTime missingDate;
 
     public PetMissing(){
-        this.setStatus(EStatusPet.MISSING);
+        this.setStatusPet(EStatusPet.MISSING);
         this.castred = ECastred.NO;
     }
 }

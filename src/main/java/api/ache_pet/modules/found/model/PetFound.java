@@ -13,14 +13,14 @@ import java.time.LocalDateTime;
 @Entity
 public class PetFound extends Pet {
 
-    @Column(name = "FOUND_DATE", nullable = false)
+    @Column(name = "FOUND_DATE")
     private LocalDateTime dateFound;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "DELIVERY")
     private EStatusDelivery statusDelivery;
     public PetFound(){
-        this.setStatus(EStatusPet.FOUND);
+        this.setStatusPet(EStatusPet.FOUND);
         this.statusDelivery = EStatusDelivery.NO;
     }
 }

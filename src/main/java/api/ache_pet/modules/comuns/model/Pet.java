@@ -19,24 +19,24 @@ public abstract class Pet {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "ESPECIE", nullable = false)
+    @Column(name = "SPECIE", nullable = false, length = 255)
     private String species;
 
-    @Column(name = "RACA")
+    @Column(name = "BREED", length = 255)
     private String breed;
 
-    @Column(name = "PORTE", nullable = false)
+    @Column(name = "SIZE", nullable = false, length = 255)
     private String size;
 
-    @Column(name = "COR", nullable = false)
+    @Column(name = "COLOR", nullable = false, length = 255)
     private String color;
 
-    @Column(name ="DATA_CADASTRO", nullable = false)
+    @Column(name ="REGISTER_DATE", nullable = false)
     private LocalDateTime date;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "STATUS", nullable = false)
-    private EStatusPet status;
+    @Column(name = "STATUS_PET", nullable = false)
+    private EStatusPet statusPet;
 
     @PrePersist
     public void prePersist(){
