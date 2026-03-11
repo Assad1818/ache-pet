@@ -48,5 +48,6 @@ public class User {
     public User(){
         this.situation = ESituation.ACTIVE;
     }
+    aaaaaaaaaaaaaaaaaaaaaaa
 
 }
