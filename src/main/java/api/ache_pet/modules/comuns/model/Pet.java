@@ -32,14 +32,32 @@ public abstract class Pet {
     private String color;
 
     @Column(name ="REGISTER_DATE", nullable = false)
-    private LocalDateTime date;
+    private LocalDateTime registerDate;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "STATUS_PET", nullable = false)
     private EStatusPet statusPet;
 
+    @Column(name = "POSTAL_CODE", nullable = false, length = 8)
+    private String postalCode;
+
+    @Column(name = "CITY", nullable = false, length = 255)
+    private String city;
+
+    @Column(name = "NEIGHBORHOOD", nullable = false, length = 255)
+    private String neighborhood;
+
+    @Column(name = "STREET", nullable = false, length = 255)
+    private String street;
+
+    @Column(name = "HOUSE_CODE", nullable = false, length = 255)
+    private String houseCode;
+
+    @Column(name = "COMPLEMENT", length = 255)
+    private String complement;
+
     @PrePersist
     public void prePersist(){
-        this.date = LocalDateTime.now();
+        this.registerDate = LocalDateTime.now();
     }
 }

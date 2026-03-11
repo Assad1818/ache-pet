@@ -21,6 +21,9 @@ public class User {
     @Column(name = "NAME", nullable = false, length = 255)
     private String name;
 
+    @Column(name = "CPF", unique = true, nullable = false)
+    private int cpf;
+
     @Column(name = "EMAIL", nullable = false)
     private String email;
 
@@ -33,6 +36,7 @@ public class User {
     @Column(name = "DATE_REGISTER", nullable = false)
     private LocalDateTime  dateRegister;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "SITUATION")
     private ESituation situation;
 
